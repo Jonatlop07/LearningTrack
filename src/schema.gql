@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""user """
+type UserGraphqlModel {
+  id: ID!
+  email: String!
+  username: String!
+  created_at: String!
+}
+
+type Query {
+  getUserAccountDetails(user_id: Int!): UserGraphqlModel!
+}

@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS learning_tracker.user
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     username VARCHAR(40) NOT NULL,
     email VARCHAR (125) NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    created_at DATE NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS learning_tracker.language

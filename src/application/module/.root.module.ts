@@ -5,6 +5,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { InfrastructureModule } from '@application/module/infrastructure.module';
+import { UserModule } from '@application/module/user.module';
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import { InfrastructureModule } from '@application/module/infrastructure.module'
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql')
     }),
-    InfrastructureModule
+    InfrastructureModule,
+    UserModule
   ]
 })
 export class RootModule {}
