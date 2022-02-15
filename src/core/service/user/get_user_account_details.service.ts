@@ -11,7 +11,7 @@ export class GetUserAccountDetailsService implements GetUserAccountDetailsIntera
   private readonly logger: Logger = new Logger(GetUserAccountDetailsService.name);
 
   constructor(
-    @Inject(UserDITokens.GetUserAccountDetailsInteractor)
+    @Inject(UserDITokens.UserRepository)
     private readonly gateway: GetUserAccountDetailsGateway
   ) {}
 
